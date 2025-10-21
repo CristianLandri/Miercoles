@@ -1,0 +1,48 @@
+body {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+* {
+    font-family:'Lato', sans-serif ;
+    font-family: 'Open Sans' sans-serif ;
+    font-family: 'PT Sans', sans-serif ;
+    box-sizing: border-box;
+}
+
+form {
+    width: 500px;
+    border: 2px solid black;
+    padding: 5rem;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+h1 {
+    display: block;
+    border: 2px solid black;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+label {
+    color: aliceblue;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 300    ;
+}
+
+.error{
+    background-color: red;
+    color: black;
+    padding: 10px;
+    width: 95%;
+}
