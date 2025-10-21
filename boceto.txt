@@ -1,0 +1,3 @@
+pagina tienda: Crear un boton llamado "otros" donde mande a los usuarios a otra pagina principal(2), en donde se encontraria las reseñas, comentarios, acerca de: nosotros y la empresa
+Pagina principal: dejar el sabias que, 
+pagina Plantas: Hacer una informacion detallada de las plantas y curiosidades acerca de las plantas.
