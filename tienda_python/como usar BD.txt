@@ -1,0 +1,5 @@
+Activar BD de la tienda
+
+primer codigo (pegar en el directorio estando en PowerShell)
+
+python servidor.py
