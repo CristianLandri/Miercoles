@@ -1,3 +1,96 @@
-pagina tienda: Crear un boton llamado "otros" donde mande a los usuarios a otra pagina principal(2), en donde se encontraria las reseñas, comentarios, acerca de: nosotros y la empresa
-Pagina principal: dejar el sabias que, 
-pagina Plantas: Hacer una informacion detallada de las plantas y curiosidades acerca de las plantas.
+CREATE DATABASE IF NOT EXISTS agrostar;
+USE agrostar;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255)
+);
+
+
+Asdsad
+
+<?php
+// DATOS DE LA BASE DE DATOS
+$server = "localhost";
+$user   = "root";
+$pass   = "";
+$db     = "agrostar";
+
+// Conexión
+$conn = new mysqli($server, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    die("Error en la conexión: " . $conn->connect_error);
+}
+
+// Recibir datos del formulario
+$nombre   = $_POST['nombre'];
+$email    = $_POST['email'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+// Insertar en DB
+$sql = "INSERT INTO usuarios (nombre, email, password) VALUES ('$nombre', '$email', '$password')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "<h2>Registro exitoso 🎉</h2>";
+    echo "<a href='login.html'>Iniciar sesión</a>";
+} else {
+    echo "Error: " . $conn->error;
+}
+
+$conn->close();
+?>
+
+
+asdas
+
+
+<?php
+include "conexion.php";
+
+$nombre   = $_POST['nombre'];
+$email    = $_POST['email'];
+$password = $_POST['password'];
+
+if (empty($nombre) || empty($email) || empty($password)) {
+    die("Faltan datos");
+}
+
+// Encriptar contraseña
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+// Guardar en la base
+$sql = "INSERT INTO usuarios (nombre, email, password) VALUES ('$nombre', '$email', '$passwordHash')";
+
+if ($conn->query($sql) === TRUE) {
+    header("Location: login.html?msg=registrado");
+    exit();
+} else {
+    echo "Error: " . $conn->error;
+}
+
+$conn->close();
+?>
+
+
+asdsa
+
+
+<?php
+session_start();
+session_destroy();
+header("Location: login.html");
+exit();
+?>
+
+
+
+
+asdas
+
+<?php
+session_start();
+echo "Bienvenido " . $_SESSION['usuario'];
+?>
