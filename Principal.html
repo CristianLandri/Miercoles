@@ -1,43 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>agrostar website | vamo</title>
-        <link rel="shortcut icon" href="img/tres.jpg" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="css/estys.css">
-    </head>
-    <body>
-        <!-- Menu Desplegable -->
-        <!-- Primario -->
-        <header>
-            
-            <a href="#" class="logo"></a>
-            <ul>
-                <li><a href="Principa.html" class="active">Home</a></li>
-                <li><a href="Indexxx.html">Plantas❀</a></li>
-                <li><a href="Tienda.html">Tienda☀</a></li>
-                <li><a href="#">Contactos</a></li>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroStar Website | Vamo</title>
+    <link rel="shortcut icon" href="img/tres.jpg" type="image/x-icon">
+
+    <!-- Bootstrap local -->
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="css/estys.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="py-3" style="background-image: url('img/fondo.jpg'); background-size: cover; background-position: center;">
+        <div class="container d-flex justify-content-between align-items-center">
+
+
+            <ul class="nav">
+                <li class="nav-item"><a href="Plantas.html" class="nav-link text-white fw-bold">Plantas❀</a></li>
+                <li class="nav-item"><a href="Tienda.html" class="nav-link text-white fw-bold">Tienda☀</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white fw-bold">Contactos</a></li>
+                <li class="nav-item"><a href="Principal.html" class="nav-link text-white bg-white rounded-pill text-success fw-bold px-3">Home</a></li>
             </ul>
-           
-        </header>
-        <section>
-            <img src="img/stars.png" id="Stars">
-            <img src="img/TOMAS.jpg" id="moo2">
-            <img src="img/" id="mountains_behind">
-            <img src="img/" id="mountains_front">
-            <h2 id="text">AgroSt❀r</h2>
-            <a href="#sec" id="btn">Mas Informacion</a>
+        </div>
+    </header>
 
+    <!-- Sección principal -->
+    <section class="text-center position-relative bg-light py-5">
+        <div class="container">
+            <img src="img/stars.png" id="Stars" class="img-fluid mb-3" alt="Estrellas decorativas">
+            <img src="img/TOMAS.jpg" id="moo2" class="img-fluid rounded shadow mb-3" alt="Imagen principal">
+
+            <h2 id="text" class="fw-bold display-5 text-success mb-4">AgroSt❀r</h2>
+            <a href="#sec" id="btn" class="btn btn-success btn-lg">Más información</a>
+        </div>
     </section>
-    <div class="sec" id="sec">
-    <h2>¿Sabias que...?</h2>
-    <p><b> Por medio de las hojas, las plantas realizan la fotosíntesis, respiran y producen los alimentos. La respiración se produce durante el día y la noche; para ello, las plantas toman el oxígeno del aire y desprenden dióxido de carbono.
-    Biologia: las plantas son organismos mayormente fotosinteticos sin capacidad locomotora, es decir, sin capacidad de desplazamiento, aunque si de movimiento, sus paredes celulares se componen principalmente de celulosa.
-    </b>
-    </p>
-        
-    </div>
 
-    </body>
+    <!-- Sección informativa -->
+    <section id="sec" class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="text-success mb-4">¿Sabías que...?</h2>
+            <p class="lead">
+                <b>Por medio de las hojas, las plantas realizan la fotosíntesis, respiran y producen los alimentos.
+                La respiración se produce durante el día y la noche; para ello, las plantas toman el oxígeno del aire
+                y desprenden dióxido de carbono.</b>
+            </p>
+            <p class="lead">
+                <b>Biología:</b> las plantas son organismos mayormente fotosintéticos sin capacidad locomotora,
+                aunque sí de movimiento. Sus paredes celulares se componen principalmente de celulosa.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-success text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2025 AgroStar — Cuidado y amor por las plantas 🌱</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
-  
