@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" type="text/css" href="css/tienda.css">
+</head>
+<body>
+
+<header>
+    <div class="btn-menu">
+        <label for="btn-menu">☰</label>
+    </div>
+
+    <h1>AgroSt❀r Tienda☀</h1>
+
+    <!-- ⭐ CARRITO ⭐ -->
+    <div class="container-icon">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon-cart">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.374 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.374 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+
+        <div class="count-products">
+            <span id="contador-productos">0</span>
+        </div>
+
+        <div class="container-cart-products hidden-cart">
+
+            <!-- AQUI SE AGREGAN PRODUCTOS -->
+            <div class="row-product"></div>
+
+            <p class="cart-empty">El carrito está vacío</p>
+
+            <div class="cart-total hidden">
+                <h3>Total:</h3>
+                <span class="total-pagar">$0</span>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- MENU -->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+    <div class="cont-menu">
+        <nav>
+            <a href="Principal.html">Home</a>
+            <a href="Plantas.html">Plantas</a>
+            <a href="Registro.html">Registro</a>
+        </nav>
+        <label for="btn-menu">✖️</label>
+    </div>
+</div>
+
+<!-- ⭐ LISTA DE PRODUCTOS ⭐ -->
+<div class="container-items" id="server-products">
+            <div class='item'>
+                <figure>
+                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Arvejas</h2>
+                    <p class='price'>$60.00</p>
+                    <p>Arvejas frescas, calidad premium</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Naranja</h2>
+                    <p class='price'>$11.00</p>
+                    <p>Arbol de naranja</p>
+                    <p class='stock'>Stock: 2</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/beneficios-de-la-planta-la-ruda.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Ruda</h2>
+                    <p class='price'>$50.00</p>
+                    <p>Ruda para infusiones</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/pimiento rojo.jpeg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Pimiento</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Pimiento rojo fresco</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/mas tomates.jpeg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Tomates</h2>
+                    <p class='price'>$50.00</p>
+                    <p>Tomates frescos</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/Perejil.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Perejil</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Perejil fresco</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/limonero.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Limonero</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Limonero joven</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/Naranja.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Naranjo</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Naranjo joven</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/manzanero.jpeg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Manzanero</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Manzano de variedad roja</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/Lima.webp' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Lima</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Lima fresca</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>asdasd</h2>
+                    <p class='price'>$11.00</p>
+                    <p>asdsa</p>
+                    <p class='stock'>Stock: 2</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>adsas</h2>
+                    <p class='price'>$11.00</p>
+                    <p>asdas</p>
+                    <p class='stock'>Stock: 2</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/Plantar-lechugas3.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>1111</h2>
+                    <p class='price'>$52.00</p>
+                    <p>1asdas</p>
+                    <p class='stock'>Stock: 2</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Naranja</h2>
+                    <p class='price'>$11.00</p>
+                    <p>Arbol de naranja</p>
+                    <p class='stock'>Stock: 2</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/beneficios-de-la-planta-la-ruda.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Ruda</h2>
+                    <p class='price'>$50.00</p>
+                    <p>Ruda para infusiones</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/pimiento rojo.jpeg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Pimiento</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Pimiento rojo fresco</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/mas tomates.jpeg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Tomates</h2>
+                    <p class='price'>$50.00</p>
+                    <p>Tomates frescos</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/Perejil.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Perejil</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Perejil fresco</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/limonero.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Limonero</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Limonero joven</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/Naranja.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Naranjo</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Naranjo joven</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/manzanero.jpeg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Manzanero</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Manzano de variedad roja</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/Lima.webp' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>Lima</h2>
+                    <p class='price'>$90.00</p>
+                    <p>Lima fresca</p>
+                    <p class='stock'>Sin stock</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>asdasd</h2>
+                    <p class='price'>$11.00</p>
+                    <p>asdsa</p>
+                    <p class='stock'>Stock: 2</p>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <figure>
+                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                </figure>
+                <div class='info-product'>
+                    <h2>adsas</h2>
+                    <p class='price'>$11.00</p>
+                    <p>asdas</p>
+                    <p class='stock'>Stock: 2</p>
+                </div>
+            </div>
+            
+</div>
+
+<!-- ⭐ JS DEL CARRITO ⭐ -->
+<script>
+/* ========================= */
+/*          CARRITO         */
+/* ========================= */
+
+const btnCart = document.querySelector('.container-icon');
+const containerCartProducts = document.querySelector('.container-cart-products');
+
+btnCart.addEventListener('click', () => {
+    containerCartProducts.classList.toggle('hidden-cart');
+});
+
+const productsList = document.querySelector('.container-items');
+const rowProduct = document.querySelector('.row-product');
+const valorTotal = document.querySelector('.total-pagar');
+const countProducts = document.querySelector('#contador-productos');
+const cartEmpty = document.querySelector('.cart-empty');
+const cartTotal = document.querySelector('.cart-total');
+
+let allProducts = [];
+
+/* Añadir productos */
+document.body.addEventListener('click', e => {
+    if (e.target.classList.contains('btn-add-cart')) {
+
+        const product = e.target.parentElement;
+        const infoProduct = {
+            quantity: 1,
+            title: product.querySelector('h2').textContent,
+            price: product.querySelector('.price').textContent
+        };
+
+        const exists = allProducts.some(p => p.title === infoProduct.title);
+
+        if (exists) {
+            allProducts = allProducts.map(p => {
+                if (p.title === infoProduct.title) p.quantity++;
+                return p;
+            });
+        } else {
+            allProducts.push(infoProduct);
+        }
+
+        showHTML();
+    }
+});
+
+/* Eliminar productos */
+rowProduct.addEventListener('click', e => {
+    if (e.target.classList.contains('icon-close')) {
+
+        const product = e.target.parentElement;
+        const title = product.querySelector('p').textContent;
+
+        allProducts = allProducts.filter(p => p.title !== title);
+        showHTML();
+    }
+});
+
+/* Mostrar en el HTML */
+function showHTML() {
+
+    if (!allProducts.length) {
+        cartEmpty.classList.remove('hidden');
+        rowProduct.classList.add('hidden');
+        cartTotal.classList.add('hidden');
+    } else {
+        cartEmpty.classList.add('hidden');
+        rowProduct.classList.remove('hidden');
+        cartTotal.classList.remove('hidden');
+    }
+
+    rowProduct.innerHTML = '';
+    let total = 0;
+    let totalItems = 0;
+
+    allProducts.forEach(product => {
+
+        const containerProduct = document.createElement('div');
+        containerProduct.classList.add('cart-product');
+
+        containerProduct.innerHTML = `
+            <div class="info-cart-product">
+                <span class="cantidad-producto-carrito">${product.quantity}</span>
+                <p class="titulo-producto-carrito">${product.title}</p>
+                <span class="precio-producto-carrito">${product.price}</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-close">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        `;
+
+        rowProduct.append(containerProduct);
+
+        total += product.quantity * parseInt(product.price.slice(1));
+        totalItems += product.quantity;
+    });
+
+    valorTotal.innerText = `$${total}`;
+    countProducts.innerText = totalItems;
+}
+</script>
+
+<!-- Script: asegurar botones Añadir al carrito -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.info-product').forEach(function(info) {
+        if (!info.querySelector('.btn-add-cart')) {
+            var stockEl = info.querySelector('.stock');
+            var hasStock = true;
+            if (stockEl) {
+                hasStock = !/Sin stock/i.test(stockEl.textContent);
+            }
+            var btn = document.createElement('button');
+            btn.className = 'btn-add-cart';
+            btn.textContent = 'Añadir al carrito';
+            if (!hasStock) btn.disabled = true;
+            if (stockEl) info.insertBefore(btn, stockEl);
+            else info.appendChild(btn);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

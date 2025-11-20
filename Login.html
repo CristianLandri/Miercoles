@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #4caf50, #2e7d32);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      border-radius: 15px;
+    }
+
+    .form-control:focus {
+      border-color: #4caf50;
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+
+    .btn-success {
+      background-color: #43a047;
+      border: none;
+    }
+
+    .btn-success:hover {
+      background-color: #2e7d32;
+    }
+
+    .toggle-pass {
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="card shadow p-4" style="max-width: 420px; width: 100%;">
+    <h2 class="text-center text-success fw-bold mb-4">Iniciar Sesión 🌿</h2>
+
+    <form action="login.php" method="POST">
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Correo electrónico</label>
+        <div class="input-group">
+          <span class="input-group-text bg-success text-white"><i class="bi bi-envelope-fill"></i></span>
+          <input type="email" name="email" class="form-control" placeholder="correo@gmail.com" required>
+        </div>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Contraseña</label>
+        <div class="input-group">
+          <span class="input-group-text bg-success text-white"><i class="bi bi-lock-fill"></i></span>
+          <input type="password" name="password" class="form-control" id="password" placeholder="••••••••" required>
+          <span class="input-group-text toggle-pass" onclick="togglePassword()">
+            <i class="bi bi-eye-fill" id="iconoPass"></i>
+          </span>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <button type="submit" class="btn btn-success w-100 mt-3">Entrar</button>
+
+      <p class="text-center mt-3">
+        ¿No tenés cuenta? <a href="registro.html" class="text-success fw-bold">Registrate</a>
+      </p>
+
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      let pass = document.getElementById("password");
+      let icono = document.getElementById("iconoPass");
+
+      if (pass.type === "password") {
+        pass.type = "text";
+        icono.classList.remove("bi-eye-fill");
+        icono.classList.add("bi-eye-slash-fill");
+      } else {
+        pass.type = "password";
+        icono.classList.remove("bi-eye-slash-fill");
+        icono.classList.add("bi-eye-fill");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio de Plantas</title>
+
+  <!-- Bootstrap local -->
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🌿 AgroStar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="Principal.html" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="Tienda.html" class="nav-link">Tienda</a></li>
+          <li class="nav-item"><a href="Registro.html" class="nav-link">Registro</a></li>
+          <li class="nav-item">
+            <a href="Login.html" class="btn btn-light ms-2">Login</a>
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Imagen principal -->
+  <section class="mt-5 position-relative">
+    <img src="img/stars.png" class="w-100" style="height: 500px; object-fit: cover;">
+    <div class="position-absolute top-50 start-50 translate-middle text-center bg-dark bg-opacity-50 p-4 rounded">
+      <h2 class="fw-bold text-white">El Mundo de las Plantas 🌿</h2>
+      <p class="text-white">Descubrí la belleza natural de flores, árboles y mucho más.</p>
+      <a href="#flores" class="btn btn-success me-2">Flores</a>
+      <a href="#arboles" class="btn btn-outline-light">Árboles</a>
+    </div>
+  </section>
+
+  <!-- Sección informativa -->
+  <section class="container my-5">
+    <h2 class="text-center text-success mb-4">Cómo hacer tu propio fertilizante natural 🌱</h2>
+    <p class="lead text-center">
+      Podés crear abono fácilmente en casa usando cáscaras de frutas y hojas secas. 
+      Cortá las cáscaras, colocalas en un recipiente con capas de tierra y mezclalas cada cierto tiempo 
+      para mantener la oxigenación. Después de unas semanas vas a tener tierra rica y fértil para tus plantas.
+    </p>
+  </section>
+
+  <!-- Galería de plantas -->
+  <section id="flores" class="container my-5">
+    <h2 class="text-center text-success mb-4">Algunas de nuestras plantas favoritas 🌺</h2>
+    <div class="row text-center g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="img/limonero.jpg" class="card-img-top" alt="Limonero">
+          <div class="card-body">
+            <h5 class="card-title text-success">Plantas</h5>
+            <p class="card-text">Un árbol frutal resistente que ofrece frutos ricos en vitamina C y un aroma fresco.</p>
+            <a href="limonero.html" class="btn btn-outline-success">Ver más</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="img/Macetas.jpg" class="card-img-top" alt="Macetero">
+          <div class="card-body">
+            <h5 class="card-title text-success">Macetas</h5>
+            <p class="card-text">Macetas ideal para plantar tus verduras, arboles y flores para la decoracion del hogar</p>
+            <a href="Macetas.html" class="btn btn-outline-success">Ver más</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="img/Semillas.jpg" class="card-img-top" alt="Semillas">
+          <div class="card-body">
+            <h5 class="card-title text-success">Semillas</h5>
+            <p class="card-text">Semillas ideales para el crecimiento propio de la planta y/o arboles</p>
+            <a href="Semillas.html" class="btn btn-outline-success">Ver más</a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección Árboles -->
+  <section id="arboles" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center text-success mb-4">Tipos de Árboles 🌳</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <img src="img/Naranja.jpg" class="img-fluid rounded shadow" alt="Pino">
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-success">El Pino</h4>
+          <p>El pino es un árbol de hoja perenne, ideal para zonas frías. Su madera se utiliza en carpintería y decoración.</p>
+          <a href="Arboles.html" class="btn btn-outline-success">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-success text-white text-center py-3">
+    <p>© 2025 AgroStar | Cuidado y pasión por las plantas 🌿</p>
+    <div>
+    <!--  <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>-->
+      <a href="https://www.instagram.com/agrostar0?igsh=MWZ1N2NucG5xbGVobg==" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+      <a href="https://x.com/AgroStar?s=09" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS local -->
+   <script src="static/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
