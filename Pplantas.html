@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroStar | Plantas</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            background: #f4f4f4; 
+            margin: 0; 
+        }
+
+        h1 { 
+            text-align: center; 
+            padding: 20px; 
+            color: #2e7d32;
+        }
+
+        .catalogo { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+
+        .tarjeta {
+            width: 250px; 
+            background: white; 
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+            padding: 15px; 
+            text-align: center;
+        }
+
+        .tarjeta img { 
+            width: 100%; 
+            height: 180px; 
+            border-radius: 10px; 
+            object-fit: cover; 
+        }
+        .volver {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Plantas y Flores</h1>
+
+<div class="catalogo">
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#E8F5E9"/>
+            <ellipse cx="100" cy="140" rx="25" ry="15" fill="#8B4513"/>
+            <path d="M 100 140 Q 80 80 70 40" stroke="#558B2F" stroke-width="4" fill="none"/>
+            <circle cx="70" cy="35" r="8" fill="#FDD835"/>
+            <circle cx="75" cy="32" r="6" fill="#FDD835"/>
+            <circle cx="65" cy="30" r="7" fill="#FDD835"/>
+            <circle cx="70" cy="42" r="5" fill="#FDD835"/>
+            <path d="M 100 140 Q 120 90 130 50" stroke="#558B2F" stroke-width="4" fill="none"/>
+            <circle cx="130" cy="48" r="7" fill="#FDD835"/>
+            <circle cx="135" cy="45" r="5" fill="#FDD835"/>
+        </svg>
+        <h3>Limonero</h3>
+        <p>Árbol frutal ideal para patios y jardines.</p>
+    </div>
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#F1F8E9"/>
+            <ellipse cx="100" cy="140" rx="20" ry="12" fill="#8B4513"/>
+            <line x1="100" y1="140" x2="100" y2="40" stroke="#558B2F" stroke-width="3"/>
+            <path d="M 100 50 L 70 70 L 80 65 M 100 50 L 130 70 L 120 65" stroke="#4CAF50" stroke-width="3" fill="none"/>
+            <path d="M 100 70 L 65 85 L 75 82 M 100 70 L 135 85 L 125 82" stroke="#66BB6A" stroke-width="3" fill="none"/>
+            <path d="M 100 90 L 60 105 L 72 100 M 100 90 L 140 105 L 128 100" stroke="#4CAF50" stroke-width="3" fill="none"/>
+        </svg>
+        <h3>Palma Areca</h3>
+        <p>Planta decorativa excelente para interiores.</p>
+    </div>
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#FCE4EC"/>
+            <ellipse cx="100" cy="140" rx="18" ry="10" fill="#8B4513"/>
+            <line x1="100" y1="140" x2="100" y2="80" stroke="#4CAF50" stroke-width="2"/>
+            <circle cx="100" cy="60" r="20" fill="#E91E63"/>
+            <circle cx="85" cy="50" r="12" fill="#EC407A"/>
+            <circle cx="115" cy="50" r="12" fill="#EC407A"/>
+            <circle cx="90" cy="70" r="10" fill="#EC407A"/>
+            <circle cx="110" cy="70" r="10" fill="#EC407A"/>
+        </svg>
+        <h3>Rosa Roja</h3>
+        <p>Flor clásica con aroma intenso y color vibrante.</p>
+    </div>
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#F3E5F5"/>
+            <ellipse cx="100" cy="150" rx="20" ry="10" fill="#8B4513"/>
+            <line x1="95" y1="150" x2="90" y2="80" stroke="#558B2F" stroke-width="2"/>
+            <line x1="100" y1="150" x2="100" y2="70" stroke="#558B2F" stroke-width="2"/>
+            <line x1="105" y1="150" x2="110" y2="80" stroke="#558B2F" stroke-width="2"/>
+            <circle cx="90" cy="75" r="4" fill="#9C27B0"/>
+            <circle cx="95" cy="65" r="4" fill="#BA68C8"/>
+            <circle cx="100" cy="65" r="4" fill="#9C27B0"/>
+            <circle cx="105" cy="65" r="4" fill="#BA68C8"/>
+            <circle cx="110" cy="75" r="4" fill="#9C27B0"/>
+        </svg>
+        <h3>Lavanda</h3>
+        <p>Planta aromática perfecta para exteriores soleados.</p>
+    </div>
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#F1F8E9"/>
+            <polygon points="100,160 85,140 90,130 100,145 110,130 115,140" fill="#8B4513"/>
+            <polygon points="100,140 80,110 90,100 100,125 110,100 120,110" fill="#66BB6A"/>
+            <polygon points="100,120 75,80 90,70 100,105 110,70 125,80" fill="#81C784"/>
+            <polygon points="100,100 70,50 90,40 100,85 110,40 130,50" fill="#4CAF50"/>
+        </svg>
+        <h3>Suculenta</h3>
+        <p>Planta pequeña resistente, ideal para interiores.</p>
+    </div>
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#E8F5E9"/>
+            <ellipse cx="100" cy="150" rx="18" ry="10" fill="#8B4513"/>
+            <line x1="100" y1="150" x2="100" y2="50" stroke="#558B2F" stroke-width="2"/>
+            <path d="M 80 100 Q 70 95 65 100" stroke="#4CAF50" stroke-width="3" fill="none"/>
+            <path d="M 120 100 Q 130 95 135 100" stroke="#4CAF50" stroke-width="3" fill="none"/>
+            <path d="M 85 120 Q 75 115 70 120" stroke="#66BB6A" stroke-width="3" fill="none"/>
+            <path d="M 115 120 Q 125 115 130 120" stroke="#66BB6A" stroke-width="3" fill="none"/>
+            <path d="M 90 70 Q 85 60 88 50" stroke="#4CAF50" stroke-width="2" fill="none"/>
+            <path d="M 110 70 Q 115 60 112 50" stroke="#4CAF50" stroke-width="2" fill="none"/>
+        </svg>
+        <h3>Helecho Boston</h3>
+        <p>Planta de hojas largas ideal para sombra.</p>
+    </div>
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#FFFDE7"/>
+            <ellipse cx="100" cy="150" rx="22" ry="12" fill="#8B4513"/>
+            <line x1="100" y1="150" x2="100" y2="40" stroke="#558B2F" stroke-width="3"/>
+            <circle cx="100" cy="30" r="22" fill="#FFB300"/>
+            <circle cx="100" cy="30" r="18" fill="#FDD835"/>
+            <polygon points="100,15 105,25 115,23 108,30 112,40 100,35 88,40 92,30 85,23 95,25" fill="#FBC02D"/>
+        </svg>
+        <h3>Girasol</h3>
+        <p>Flor grande y llamativa que sigue la luz del sol.</p>
+    </div>
+
+    <div class="tarjeta">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:180px;">
+            <rect width="200" height="180" fill="#FFF3E0"/>
+            <ellipse cx="100" cy="150" rx="20" ry="12" fill="#8B4513"/>
+            <circle cx="100" cy="100" r="30" fill="#8B6914"/>
+            <circle cx="80" cy="85" r="8" fill="#A0783D"/>
+            <circle cx="120" cy="85" r="8" fill="#A0783D"/>
+            <circle cx="85" cy="110" r="6" fill="#A0783D"/>
+            <circle cx="115" cy="110" r="6" fill="#A0783D"/>
+            <circle cx="100" cy="125" r="7" fill="#A0783D"/>
+        </svg>
+        <h3>Cactus</h3>
+        <p>Planta resistente de bajo mantenimiento.</p>
+    </div>
+
+</div>
+
+<a href="Plantas.html" class="volver">⬅ Volver a Plantas</a>
+
+</body>
+</html>
+    

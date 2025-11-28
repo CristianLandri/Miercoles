@@ -53,9 +53,12 @@
 <div class="container-menu">
     <div class="cont-menu">
         <nav>
-            <a href="Principal.html">Home</a>
+            <a href="Principal.html">Inicio</a>
             <a href="Plantas.html">Plantas</a>
+            <a href="Tienda.html">Tienda</a>
             <a href="Registro.html">Registro</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="Login.html">Login</a>
         </nav>
         <label for="btn-menu">✖️</label>
     </div>
@@ -63,297 +66,366 @@
 
 <!-- ⭐ LISTA DE PRODUCTOS ⭐ -->
 <div class="container-items" id="server-products">
-            <div class='item'>
+            <!-- SERVER_PRODUCTS -->
+            <div class="item">
                 <figure>
-                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                    <img src="img/3b0118ae1692a0a6a3f2c710b0aea838.jpg" alt="mandarina">
                 </figure>
-                <div class='info-product'>
-                    <h2>Arvejas</h2>
-                    <p class='price'>$60.00</p>
+                <div class="info-item">
+                    <h2>mandarina</h2>
+                    <p class="price" style='font-weight:bold;'>$100000.00</p>
                     <p>Arvejas frescas, calidad premium</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 20</p>
+                    <button class='btn-add-cart' data-id='1' >Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                    <img src="img/3b0118ae1692a0a6a3f2c710b0aea838.jpg" alt="Naranja">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Naranja</h2>
-                    <p class='price'>$11.00</p>
+                    <p class="price" style='font-weight:bold;'>$11.00</p>
                     <p>Arbol de naranja</p>
-                    <p class='stock'>Stock: 2</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 2</p>
+                    <button class='btn-add-cart' data-id='2' >Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/beneficios-de-la-planta-la-ruda.jpg' alt='producto'>
+                    <img src="img/beneficios-de-la-planta-la-ruda.jpg" alt="Ruda">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Ruda</h2>
-                    <p class='price'>$50.00</p>
+                    <p class="price" style='font-weight:bold;'>$0.00</p>
                     <p>Ruda para infusiones</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='3' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/pimiento rojo.jpeg' alt='producto'>
+                    <img src="img/pimiento rojo.jpeg" alt="Pimiento">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Pimiento</h2>
-                    <p class='price'>$90.00</p>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
                     <p>Pimiento rojo fresco</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='4' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/mas tomates.jpeg' alt='producto'>
+                    <img src="img/mas tomates.jpeg" alt="Tomates">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Tomates</h2>
-                    <p class='price'>$50.00</p>
+                    <p class="price" style='font-weight:bold;'>$50.00</p>
                     <p>Tomates frescos</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='5' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/Perejil.jpg' alt='producto'>
+                    <img src="img/Perejil.jpg" alt="Perejil">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Perejil</h2>
-                    <p class='price'>$90.00</p>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
                     <p>Perejil fresco</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='6' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/limonero.jpg' alt='producto'>
+                    <img src="img/limonero.jpg" alt="Limonero">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Limonero</h2>
-                    <p class='price'>$90.00</p>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
                     <p>Limonero joven</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='7' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/Naranja.jpg' alt='producto'>
+                    <img src="img/Naranja.jpg" alt="Naranjo">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Naranjo</h2>
-                    <p class='price'>$90.00</p>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
                     <p>Naranjo joven</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='8' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/manzanero.jpeg' alt='producto'>
+                    <img src="img/manzanero.jpeg" alt="Manzanero">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Manzanero</h2>
-                    <p class='price'>$90.00</p>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
                     <p>Manzano de variedad roja</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='9' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/Lima.webp' alt='producto'>
+                    <img src="img/Lima.webp" alt="Lima">
                 </figure>
-                <div class='info-product'>
+                <div class="info-item">
                     <h2>Lima</h2>
-                    <p class='price'>$90.00</p>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
                     <p>Lima fresca</p>
-                    <p class='stock'>Sin stock</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='10' disabled>Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                    <img src="https://i.blogs.es/e73d21/tomatoes-5356_1280/1366_2000.jpeg" alt="TOMATES">
                 </figure>
-                <div class='info-product'>
-                    <h2>asdasd</h2>
-                    <p class='price'>$11.00</p>
-                    <p>asdsa</p>
-                    <p class='stock'>Stock: 2</p>
+                <div class="info-item">
+                    <h2>TOMATES</h2>
+                    <p class="price" style='font-weight:bold;'>$20.00</p>
+                    <p>LOS MEJORES TOMATES</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 7</p>
+                    <button class='btn-add-cart' data-id='15' >Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
+                    <img src="https://media.istockphoto.com/id/1189117605/es/vector/ilustraci%C3%B3n-vectorial-de-un-tomate-divertido-en-estilo-de-dibujos-animados.jpg?s=612x612&w=0&k=20&c=Z4rVgmciX2dGJ2RieWixaJ2x0len2Uymn5xkNCn2Cqw=" alt="TOMATES">
                 </figure>
-                <div class='info-product'>
-                    <h2>adsas</h2>
-                    <p class='price'>$11.00</p>
-                    <p>asdas</p>
-                    <p class='stock'>Stock: 2</p>
+                <div class="info-item">
+                    <h2>TOMATES</h2>
+                    <p class="price" style='font-weight:bold;'>$20.00</p>
+                    <p>LOS MEJORES TOMATES</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 7</p>
+                    <button class='btn-add-cart' data-id='16' >Añadir al carrito</button>
                 </div>
             </div>
             
-            <div class='item'>
+            <div class="item">
                 <figure>
-                    <img src='img/Plantar-lechugas3.jpg' alt='producto'>
+                    <img src="img/papas.jpg" alt="papas">
                 </figure>
-                <div class='info-product'>
-                    <h2>1111</h2>
-                    <p class='price'>$52.00</p>
-                    <p>1asdas</p>
-                    <p class='stock'>Stock: 2</p>
-                </div>
-            </div>
-            </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Naranja</h2>
-                    <p class='price'>$11.00</p>
-                    <p>Arbol de naranja</p>
-                    <p class='stock'>Stock: 2</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/beneficios-de-la-planta-la-ruda.jpg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Ruda</h2>
-                    <p class='price'>$50.00</p>
-                    <p>Ruda para infusiones</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/pimiento rojo.jpeg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Pimiento</h2>
-                    <p class='price'>$90.00</p>
-                    <p>Pimiento rojo fresco</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/mas tomates.jpeg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Tomates</h2>
-                    <p class='price'>$50.00</p>
-                    <p>Tomates frescos</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/Perejil.jpg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Perejil</h2>
-                    <p class='price'>$90.00</p>
-                    <p>Perejil fresco</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/limonero.jpg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Limonero</h2>
-                    <p class='price'>$90.00</p>
-                    <p>Limonero joven</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/Naranja.jpg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Naranjo</h2>
-                    <p class='price'>$90.00</p>
-                    <p>Naranjo joven</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/manzanero.jpeg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Manzanero</h2>
-                    <p class='price'>$90.00</p>
-                    <p>Manzano de variedad roja</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/Lima.webp' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>Lima</h2>
-                    <p class='price'>$90.00</p>
-                    <p>Lima fresca</p>
-                    <p class='stock'>Sin stock</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>asdasd</h2>
-                    <p class='price'>$11.00</p>
-                    <p>asdsa</p>
-                    <p class='stock'>Stock: 2</p>
-                </div>
-            </div>
-            
-            <div class='item'>
-                <figure>
-                    <img src='img/3b0118ae1692a0a6a3f2c710b0aea838.jpg' alt='producto'>
-                </figure>
-                <div class='info-product'>
-                    <h2>adsas</h2>
-                    <p class='price'>$11.00</p>
-                    <p>asdas</p>
-                    <p class='stock'>Stock: 2</p>
+                <div class="info-item">
+                    <h2>papas</h2>
+                    <p class="price" style='font-weight:bold;'>$20.00</p>
+                    <p>papas</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 2</p>
+                    <button class='btn-add-cart' data-id='17' >Añadir al carrito</button>
                 </div>
             </div>
             
 </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/3b0118ae1692a0a6a3f2c710b0aea838.jpg" alt="Naranja">
+                </figure>
+                <div class="info-item">
+                    <h2>Naranja</h2>
+                    <p class="price" style='font-weight:bold;'>$11.00</p>
+                    <p>Arbol de naranja</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 2</p>
+                    <button class='btn-add-cart' data-id='2' >Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/beneficios-de-la-planta-la-ruda.jpg" alt="Ruda">
+                </figure>
+                <div class="info-item">
+                    <h2>Ruda</h2>
+                    <p class="price" style='font-weight:bold;'>$0.00</p>
+                    <p>Ruda para infusiones</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='3' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/pimiento rojo.jpeg" alt="Pimiento">
+                </figure>
+                <div class="info-item">
+                    <h2>Pimiento</h2>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
+                    <p>Pimiento rojo fresco</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='4' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/mas tomates.jpeg" alt="Tomates">
+                </figure>
+                <div class="info-item">
+                    <h2>Tomates</h2>
+                    <p class="price" style='font-weight:bold;'>$50.00</p>
+                    <p>Tomates frescos</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='5' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/Perejil.jpg" alt="Perejil">
+                </figure>
+                <div class="info-item">
+                    <h2>Perejil</h2>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
+                    <p>Perejil fresco</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='6' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/limonero.jpg" alt="Limonero">
+                </figure>
+                <div class="info-item">
+                    <h2>Limonero</h2>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
+                    <p>Limonero joven</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='7' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/Naranja.jpg" alt="Naranjo">
+                </figure>
+                <div class="info-item">
+                    <h2>Naranjo</h2>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
+                    <p>Naranjo joven</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='8' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/manzanero.jpeg" alt="Manzanero">
+                </figure>
+                <div class="info-item">
+                    <h2>Manzanero</h2>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
+                    <p>Manzano de variedad roja</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='9' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/Lima.webp" alt="Lima">
+                </figure>
+                <div class="info-item">
+                    <h2>Lima</h2>
+                    <p class="price" style='font-weight:bold;'>$90.00</p>
+                    <p>Lima fresca</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='10' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="https://i.blogs.es/e73d21/tomatoes-5356_1280/1366_2000.jpeg" alt="TOMATES">
+                </figure>
+                <div class="info-item">
+                    <h2>TOMATES</h2>
+                    <p class="price" style='font-weight:bold;'>$20.00</p>
+                    <p>LOS MEJORES TOMATES</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 7</p>
+                    <button class='btn-add-cart' data-id='15' >Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="https://media.istockphoto.com/id/1189117605/es/vector/ilustraci%C3%B3n-vectorial-de-un-tomate-divertido-en-estilo-de-dibujos-animados.jpg?s=612x612&w=0&k=20&c=Z4rVgmciX2dGJ2RieWixaJ2x0len2Uymn5xkNCn2Cqw=" alt="TOMATES">
+                </figure>
+                <div class="info-item">
+                    <h2>TOMATES</h2>
+                    <p class="price" style='font-weight:bold;'>$20.00</p>
+                    <p>LOS MEJORES TOMATES</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 7</p>
+                    <button class='btn-add-cart' data-id='16' >Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="/img/papas.jpg" alt="papas">
+                </figure>
+                <div class="info-item">
+                    <h2>papas</h2>
+                    <p class="price" style='font-weight:bold;'>$20.00</p>
+                    <p>papas</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 2</p>
+                    <button class='btn-add-cart' data-id='17' >Añadir al carrito</button>
+                </div>
+            </div>
+            
+</div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/3b0118ae1692a0a6a3f2c710b0aea838.jpg" alt="Naranja">
+                </figure>
+                <div class="info-item">
+                    <h2>Naranja</h2>
+                    <p class="price" style='font-weight:bold;'>$11.00</p>
+                    <p>Arbol de naranja</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 2</p>
+                    <button class='btn-add-cart' data-id='2' >Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <div class="item">
+                <figure>
+                    <img src="img/beneficios-de-la-planta-la-ruda.jpg" alt="Ruda">
+                </figure>
+                <div class="info-item">
+                    <h2>Ruda</h2>
+                    <p class="price" style='font-weight:bold;'>$0.00</p>
+                    <p>Ruda para infusiones</p>
+                    <p class='stock' style='font-size:12px;color:#666;'>Stock: 0</p>
+                    <button class='btn-add-cart' data-id='3' disabled>Añadir al carrito</button>
+                </div>
+            </div>
+            
+
+
 
 <!-- ⭐ JS DEL CARRITO ⭐ -->
 <script>

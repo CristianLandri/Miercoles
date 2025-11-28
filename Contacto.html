@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - AgroStar</title>
+
+  <!-- Bootstrap local -->
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+    }
+
+    .navbar {
+      background-color: #2e7d32 !important;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-header {
+      background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+      color: white;
+      padding: 60px 0;
+      margin-top: 56px;
+    }
+
+    .contact-header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .contact-header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+
+    .form-control:focus {
+      border-color: #2e7d32;
+      box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+    }
+
+    .btn-send {
+      background-color: #43a047;
+      border: none;
+      padding: 12px 40px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-send:hover {
+      background-color: #2e7d32;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .info-card i {
+      font-size: 3rem;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .info-card p {
+      color: #666;
+      margin: 0;
+    }
+
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      color: #2e7d32;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.3rem;
+    }
+
+    .social-links a:hover {
+      background-color: #2e7d32;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+    }
+
+    .form-label {
+      color: #2e7d32;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .success-message {
+      display: none;
+      background-color: #4caf50;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .error-message {
+      color: #d32f2f;
+      font-size: 0.875rem;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-header h1 {
+        font-size: 2rem;
+      }
+
+      .contact-form {
+        padding: 25px;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="Principal.html">🌿 AgroStar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="Principal.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="Plantas.html" class="nav-link">Plantas</a></li>
+          <li class="nav-item"><a href="Tienda.html" class="nav-link">Tienda</a></li>
+          <li class="nav-item"><a href="Registro.html" class="nav-link">Registro</a></li>
+          <li class="nav-item"><a href="Contacto.html" class="nav-link active">Contacto</a></li>
+          <li class="nav-item">
+            <a href="Login.html" class="btn btn-light ms-2">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header de Contacto -->
+  <section class="contact-header">
+    <div class="container">
+      <h1>Ponte en Contacto 📞</h1>
+      <p>¿Tienes preguntas? Nos encantaría escucharte. Contáctanos hoy mismo.</p>
+    </div>
+  </section>
+
+  <!-- Contenido Principal -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Formulario de Contacto -->
+      <div class="col-lg-7">
+        <div class="contact-form">
+          <h2 class="mb-4 text-success">Envíanos un Mensaje</h2>
+          
+          <div class="success-message" id="successMessage">
+            ¡Tu mensaje ha sido enviado correctamente! Nos pondremos en contacto pronto.
+          </div>
+
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              <div class="error-message" id="errorNombre"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
+              <div class="error-message" id="errorEmail"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono (opcional)</label>
+              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+34 123 456 789">
+            </div>
+
+            <div class="mb-3">
+              <label for="asunto" class="form-label">Asunto</label>
+              <input type="text" class="form-control" id="asunto" name="asunto" placeholder="¿De qué se trata?" required>
+              <div class="error-message" id="errorAsunto"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas..." required></textarea>
+              <div class="error-message" id="errorMensaje"></div>
+            </div>
+
+            <button type="submit" class="btn btn-send w-100">
+              <i class="bi bi-send-fill"></i> Enviar Mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Información de Contacto -->
+      <div class="col-lg-5">
+        <div class="contact-info">
+          <!-- Email -->
+          <div class="info-card">
+            <i class="bi bi-envelope-fill"></i>
+            <h3>Email</h3>
+            <p>contacto@agrostar.com</p>
+            <p style="font-size: 0.9rem; color: #999;">Respuesta en 24 horas</p>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="info-card">
+            <i class="bi bi-telephone-fill"></i>
+            <h3>Teléfono</h3>
+            <p>+34 123 456 789</p>
+            <p style="font-size: 0.9rem; color: #999;">Lun-Vie 9am-6pm</p>
+          </div>
+
+          <!-- Ubicación -->
+          <div class="info-card">
+            <i class="bi bi-geo-alt-fill"></i>
+            <h3>Ubicación</h3>
+            <p>Calle Principal, 123</p>
+            <p style="font-size: 0.9rem; color: #999;">Madrid, España</p>
+          </div>
+
+          <!-- Redes Sociales -->
+          <div class="info-card">
+            <i class="bi bi-share-fill"></i>
+            <h3>Síguenos</h3>
+            <div class="social-links">
+              <a href="https://www.instagram.com/agrostar0?igsh=MWZ1N2NucG5xbGVobg==" target="_blank" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://x.com/AgroStar?s=09" target="_blank" title="Twitter">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+                <i class="bi bi-tiktok"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mapa (simulado) -->
+  <section class="container my-5">
+    <h2 class="text-center text-success mb-4">Nuestras Ubicaciones</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-3.7038!3d40.4168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAgroStar!5e0!3m2!1ses!2ses!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container my-5 pb-5">
+    <h2 class="text-center text-success mb-4">Preguntas Frecuentes</h2>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                ¿Cuál es el horario de atención?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Atendemos de lunes a viernes de 9:00 AM a 6:00 PM. Los fines de semana respondemos mensajes mediante email.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                ¿Cuánto tarda en responder?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Respondemos todos los mensajes en un máximo de 24 horas laborales.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                ¿Ofrecen servicio de envío?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sí, ofrecemos envío a todo el país. Los costos y tiempos varían según la ubicación.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                ¿Puedo cambiar mi pedido después de realizarlo?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sí, siempre que lo hagas dentro de las 2 horas después de realizar el pedido.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-success text-white text-center py-4">
+    <div class="container">
+      <p class="mb-2">© 2025 AgroStar | Cuidado y pasión por las plantas 🌿</p>
+      <div>
+        <a href="https://www.instagram.com/agrostar0?igsh=MWZ1N2NucG5xbGVobg==" class="text-white mx-2" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/AgroStar?s=09" class="text-white mx-2" target="_blank"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS local -->
+  <script src="static/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para Formulario -->
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Limpiar mensajes de error
+      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+      // Obtener valores
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const asunto = document.getElementById('asunto').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      // Validaciones
+      let isValid = true;
+
+      if (nombre.length < 3) {
+        document.getElementById('errorNombre').textContent = 'El nombre debe tener al menos 3 caracteres.';
+        isValid = false;
+      }
+
+      if (!email.includes('@') || !email.includes('.')) {
+        document.getElementById('errorEmail').textContent = 'Por favor ingresa un email válido.';
+        isValid = false;
+      }
+
+      if (asunto.length < 5) {
+        document.getElementById('errorAsunto').textContent = 'El asunto debe tener al menos 5 caracteres.';
+        isValid = false;
+      }
+
+      if (mensaje.length < 10) {
+        document.getElementById('errorMensaje').textContent = 'El mensaje debe tener al menos 10 caracteres.';
+        isValid = false;
+      }
+
+      if (isValid) {
+        // Mostrar mensaje de éxito
+        successMessage.style.display = 'block';
+        
+        // Limpiar formulario
+        contactForm.reset();
+
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 5000);
+
+        // Aquí iría el código para enviar el email (PHP, Node.js, etc.)
+        console.log('Formulario válido:', { nombre, email, asunto, mensaje });
+      }
+    });
+  </script>
+
+</body>
+</html>
